@@ -1,36 +1,30 @@
 package sample;
 
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 
+import java.net.URL;
 import java.util.HashSet;
+import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller implements Initializable {
     public Button btn;
     public TextArea txt;
 
-    public  void Submit() {
-         HashSet<Integer> SNTArray = new HashSet<>();
-        while (SNTArray.size() < 100){
-            int x = 30;
-            if (x < 2){
-                return;
-            }
-            int squareRoot = (int) Math.sqrt(x);
-            for (int i =2; i < squareRoot; i++){
-                if (x % i == 0){
-                    return;
+    public void initialize(URL location, ResourceBundle resource){
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for (Integer i = 600; i > 0; i -= 1 ){
+                    txt.setText(i.toString());
+                    try {
+                        Thread.sleep(1000);
+                    }catch (Exception e){}
                 }
 
             }
-            return;
-
-
-        }
-        String str = "";
-        for (Integer a: SNTArray){
-            str += a+"\n";
-        }
-        txt.setText(str);
+        });
     }
+
 }
