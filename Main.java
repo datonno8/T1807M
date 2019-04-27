@@ -1,14 +1,23 @@
-package ASM2;
+package sample;
 
-public class Main {
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("asm5.fxml"));
+        primaryStage.setTitle("So Nguyen To");
+        primaryStage.setScene(new Scene(root, 600, 600));
+        primaryStage.show();
+    }
+
+
     public static void main(String[] args) {
-        PersonModel<Student> studentPersonModel = new PersonModel<>();
-        studentPersonModel.add(new Student(1, 30, "Hao"));
-        studentPersonModel.add(new Student(2, 20, "Giang"));
-        studentPersonModel.input();
-        PersonModel<Employee> employeePersonModel = new PersonModel<>();
-        employeePersonModel.add(new Employee(15.000, 4, "Ba"));
-        employeePersonModel.add(new Employee(40.000, 5, "Chou"));
-        employeePersonModel.input();
+        launch(args);
     }
 }
