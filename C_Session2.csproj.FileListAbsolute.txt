@@ -1,0 +1,6 @@
+C:\Users\Administrator\RiderProjects\T1807M\C_Session2\obj\Debug\C_Session2.csprojAssemblyReference.cache
+C:\Users\Administrator\RiderProjects\T1807M\C_Session2\obj\Debug\C_Session2.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\RiderProjects\T1807M\C_Session2\bin\Debug\C_Session2.exe
+C:\Users\Administrator\RiderProjects\T1807M\C_Session2\bin\Debug\C_Session2.pdb
+C:\Users\Administrator\RiderProjects\T1807M\C_Session2\obj\Debug\C_Session2.exe
+C:\Users\Administrator\RiderProjects\T1807M\C_Session2\obj\Debug\C_Session2.pdb
