@@ -1,13 +1,21 @@
-package ASM8;
+package JV1_Phone;
 
 public class PhoneNumber {
-    public String name;
-    public String phone;
+    String name;
+    String phone;
 
     public PhoneNumber(String name, String phone) {
-        this.name = name;
-        this.phone = phone;
+        this.setName("nguyen van a");
+        this.setPhone("0156456");
     }
+
+    public PhoneNumber() {
+        this.setName("nguyen van a");
+        this.setPhone("548542111");
+        System.out.println("Name:"+this.getName());
+        System.out.println("phone:"+this.getPhone());
+    }
+
 
     public String getName() {
         return name;

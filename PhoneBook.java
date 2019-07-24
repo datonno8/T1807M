@@ -1,19 +1,17 @@
-package ASM8;
-
+package JV1_Phone;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-
-public class PhoneBook extends Phone {
-    public ArrayList<PhoneNumber> PhoneList;
+public  class PhoneBook extends Phone {
+    public ArrayList<PhoneNumber>PhoneList = new ArrayList<>();
 
     @Override
-    public void removePhone(String name){
+    public void removePhone(String name) {
         for (PhoneNumber pn:this.PhoneList){
             if (pn.getName().equals(name)){
                 this.PhoneList.remove(pn);
-                System.out.println("Done");
+                System.out.println("done");
 
             }
         }
@@ -24,7 +22,7 @@ public class PhoneBook extends Phone {
         for (PhoneNumber pn:this.PhoneList) {
             if (pn.getName().equals(name)) {
                 pn.setPhone(newPhone);
-                System.out.println("Done");
+                System.out.println("done");
             }
         }
     }
@@ -49,17 +47,18 @@ public class PhoneBook extends Phone {
 
 
     @Override
-    public void insertPhone(String name, String Phone) {
-        for (PhoneNumber pN:this.PhoneList){
-            if (pN.getName().equals(name)){
-                if(pN.getPhone().equals(Phone)){
-                    System.out.println("Exist");
+    public void insertPhone(String name, String phone) {
+        for (PhoneNumber pn:this.PhoneList){
+            if (pn.getName().equals(name)){
+                if(pn.getPhone().equals(phone)){
+                    System.out.println("đã tồn tại");
                     return;
                 }
-                pN.setPhone(pN.getPhone()+ ":" + Phone);
+                pn.setPhone(pn.getPhone()+ ":" + phone);
                 return;
             }
         }
-        this.PhoneList.add(new PhoneNumber(name,Phone));
+        this.PhoneList.add(new PhoneNumber(name,phone));
+        System.out.println(this.PhoneList);
     }
 }
